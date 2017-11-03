@@ -4,9 +4,7 @@ Replaces Kirby’s markdown component for one that uses [CommonMark](http://comm
 
 ## Installation
 
-`git submodule add git@github.com:iksi/kirby-commonmark.git site/plugins/kirby-commonmark`
-
-Or put the contents of the repository in `site/plugins/kirby-commonmark`.
+`git submodule add git@github.com:iksi/kirby-commonmark.git site/plugins/kirby-commonmark` Or put the contents of the repository in `site/plugins/kirby-commonmark`. After that `cd site/plugins/kirby-commonmark` and `composer install`.
 
 ## License
 
