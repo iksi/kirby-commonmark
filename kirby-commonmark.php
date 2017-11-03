@@ -13,7 +13,8 @@ class KirbyCommonMark extends \Kirby\Component\Markdown {
     return [
       'plugin.commonmark' => true,
       'plugin.commonmark.environment' => Environment::createCommonMarkEnvironment(),
-      'plugin.commonmark.breaks' => true
+      'plugin.commonmark.breaks' => true,
+      'plugin.commonmark.html' => 'allow'
     ];
   }
 
@@ -24,7 +25,8 @@ class KirbyCommonMark extends \Kirby\Component\Markdown {
       $converter = new CommonMarkConverter([
         'renderer' => [
           'soft_break' => $this->kirby->options['plugin.commonmark.breaks'] ? '<br>' : PHP_EOL
-        ]
+        ],
+        'html_input' => $this->kirby->options['plugin.commonmark.html']
       ], $this->kirby->options['plugin.commonmark.environment']);
 
       return $converter->convertToHtml($commonmark);
