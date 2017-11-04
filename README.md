@@ -20,7 +20,7 @@ $kirby = kirby();
 
 ## Configuration
 
-```
+```PHP
 c::set('plugin.commonmark', true);
 c::set('plugin.commonmark.config', []);
 ```
