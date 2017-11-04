@@ -27,6 +27,15 @@ c::set('plugin.commonmark.config', []);
 
 Options for `plugin.commonmark.config` are listed on <http://commonmark.thephpleague.com/configuration/>.
 
+## Custom parsers
+
+You can add your own [custom parsers](http://commonmark.thephpleague.com/customization/overview/):
+
+```PHP
+c::set('plugin.commonmark.parsers.block', []);
+c::set('plugin.commonmark.parsers.inline', []);
+```
+
 ## License
 
 [MIT](LICENSE.md)
