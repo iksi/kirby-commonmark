@@ -11,8 +11,7 @@ class Markdown extends \Kirby\Component\Markdown {
     return [
       'plugin.commonmark' => true,
       'plugin.commonmark.config' => [],
-      'plugin.commonmark.parsers.block' => [],
-      'plugin.commonmark.parsers.inline' => []
+      'plugin.commonmark.extensions' => []
     ];
   }
 
@@ -21,16 +20,11 @@ class Markdown extends \Kirby\Component\Markdown {
       return $commonmark;
     } else {
       $config = $this->kirby->options['plugin.commonmark.config'];
-      $blockParsers = $this->kirby->options['plugin.commonmark.parsers.block'];
-      $inlineParsers = $this->kirby->options['plugin.commonmark.parsers.inline'];
+      $extensions = $this->kirby->options['plugin.commonmark.extensions'];
       $environment = Environment::createCommonMarkEnvironment();
 
-      foreach ($blockParsers as $blockParser) {
-        $environment->addBlockParser($blockParser);
-      }
-
-      foreach ($inlineParsers as $inlineParser) {
-        $environment->addInlineParser($inlineParser);
+      foreach ($extensions as $extension) {
+        $environment->addExtension($extension);
       }
 
       $converter = new CommonMarkConverter($config, $environment);

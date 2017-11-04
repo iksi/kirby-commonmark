@@ -2,7 +2,7 @@
   "name": "kirby-commonmark",
   "description": "Replaces Kirby’s markdown component for one that uses CommonMark",
   "author": "Jurriaan Topper <jurriaan@iksi.eu> (http://www.iksi.eu/)",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "type": "kirby-plugin",
   "license": "MIT",
   "repository": {
