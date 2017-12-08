@@ -9,7 +9,7 @@ class Markdown extends \Kirby\Component\Markdown {
 
   public function defaults() {
     return [
-      'plugin.commonmark' => false,
+      'plugin.commonmark' => true,
       'plugin.commonmark.config' => [],
       'plugin.commonmark.extensions' => []
     ];
